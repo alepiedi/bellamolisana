@@ -1,0 +1,7 @@
+/* Senza JavaScript: tutto visibile, niente apertura né animazioni di entrata */
+.loader { display: none; }
+.reveal, .hero__text > *, .hero__mozz, .hero__seal { opacity: 1 !important; transform: none !important; }
+.hero__title .line > span { transform: none !important; }
+.arch--main, .arch--small { clip-path: none !important; }
+.hours__stage, .numbers__live, #families, .catalog, .land__mapCol, .foot__egg { display: none; }
+.story { opacity: 1; min-height: 0; }

@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src https://www.google.com; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- Ambiente di prova: non indicizzare (togliere quando il sito andrà su bellamolisana.it) -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bella Molisana · Mozzarella slow del Matese · Campochiaro</title>
+<meta name="description" content="Bella Molisana, caseificio di Campochiaro alle falde del Matese: mozzarella, nodini, treccine, scamorza appassita, ricotta e burro di panna. Solo latte, sale, caglio e fermenti lattici vivi, 16 ore di lavorazione.">
+<meta name="theme-color" content="#FAF7F0">
+<meta property="og:title" content="Bella Molisana · Semplice e naturale">
+<meta property="og:description" content="La mozzarella slow del Matese: quattro ingredienti, sedici ore, acqua sorgiva.">
+<meta property="og:image" content="assets/img/foto/campi.webp">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/cormorant-normal-300-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cormorant-italic-300-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope-normal-400-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/foto/hero-donna.webp" as="image" fetchpriority="high">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+<noscript><link rel="stylesheet" href="assets/css/nojs.css?v=1"></noscript>
+</head>
+<body>
+
+<!-- ============ APERTURA: l'emblema e il latte ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__in">
+    <img src="assets/img/emblema.webp" alt="" width="460" height="345">
+    <p class="loader__motto">Fresca tradizione casearia</p>
+    <div class="loader__line"><i></i></div>
+  </div>
+  <div class="loader__milk"></div>
+</div>
+
+<a class="skip" href="#main">Vai al contenuto</a>
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+
+<!-- ============ HEADER ============ -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#home" id="logoBtn" aria-label="Bella Molisana, torna all'inizio">
+    <img src="assets/img/logo.webp" alt="Bella Molisana" width="520" height="47">
+  </a>
+  <nav class="nav__menu" id="navMenu" aria-label="Principale">
+    <a href="#sedici-ore" data-nav="sedici-ore">La mozzarella slow</a>
+    <a href="#ricetta" data-nav="ricetta">Ricetta bella sana</a>
+    <a href="#prodotti" data-nav="prodotti">Prodotti</a>
+    <a href="#territorio" data-nav="territorio">Il Matese</a>
+    <a href="#qualita" data-nav="qualita">Qualità</a>
+    <a href="#contatti" data-nav="contatti" class="nav__cta">Dove trovarci</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="navMenu"><i></i><i></i></button>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home" aria-labelledby="heroTitle">
+  <div class="hero__text">
+    <p class="eyebrow"><span class="dot"></span>Campochiaro · Molise · dal latte all'alba</p>
+    <h1 class="hero__title" id="heroTitle">
+      <span class="line"><span>Semplice</span></span>
+      <span class="line"><span><em>e naturale.</em></span></span>
+    </h1>
+    <p class="hero__lead">La mozzarella <em>slow</em> del Matese: quattro ingredienti, sedici ore di lavorazione e l'acqua sorgiva che scende dalla montagna.</p>
+    <div class="hero__cta">
+      <a class="btn btn--dark magnetic" href="#prodotti">Scopri i prodotti</a>
+      <a class="btn btn--line" href="#sedici-ore">Le nostre 16 ore <span aria-hidden="true">→</span></a>
+    </div>
+    <ul class="hero__facts" aria-label="In breve">
+      <li><b>4</b><span>ingredienti</span></li>
+      <li><b>16</b><span>ore di lavorazione</span></li>
+      <li><b>300</b><span>km in 12 ore</span></li>
+    </ul>
+  </div>
+  <div class="hero__art" id="heroArt" aria-hidden="true">
+    <figure class="arch arch--main" data-depth="10"><img src="assets/img/foto/hero-donna.webp" alt="" width="900" height="855"></figure>
+    <figure class="arch arch--small" data-depth="22"><img src="assets/img/foto/hero-ruscello.webp" alt="" width="700" height="600"></figure>
+    <img class="hero__mozz" data-depth="34" src="assets/img/prodotti/mozzarelline-vaschetta-200g.webp" alt="" width="640" height="416">
+    <div class="hero__seal">
+      <svg viewBox="0 0 200 200"><defs><path id="sealPath" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+        <text><textPath href="#sealPath">Solo latte · sale · caglio · fermenti lattici vivi ·</textPath></text></svg>
+      <span><b>16</b>ore</span>
+    </div>
+  </div>
+  <a class="hero__scroll" href="#storia" aria-label="Scorri alla storia"><i></i></a>
+</section>
+
+<!-- ============ NASTRO DEGLI INGREDIENTI ============ -->
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon__track" id="ribbon">
+    <span>Latte</span><i>✦</i><span>Sale</span><i>✦</i><span>Caglio</span><i>✦</i><span>Fermenti lattici vivi</span><i>✦</i><span>Acqua del Matese</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============ STORIA IN BREVE ============ -->
+<section class="intro" id="storia" aria-labelledby="introTitle">
+  <div class="wrap intro__grid">
+    <div class="intro__head reveal">
+      <p class="eyebrow">Una lunga storia molisana</p>
+      <h2 class="h2" id="introTitle">Tradizione, freschezza e <em>trasparenza</em>, tutti i giorni.</h2>
+    </div>
+    <div class="intro__body reveal">
+      <p class="drop">Bella Molisana produce i suoi latticini ogni giorno, nel rispetto della tradizione casearia molisana: pochi ingredienti semplici e genuini, lavorati seguendo le ricette tipiche del territorio.</p>
+      <p>L'anima tradizionale la si ritrova nel <strong>lungo processo produttivo</strong>: servono sedici ore, il tempo giusto perché i fermenti lattici facciano maturare il latte che poi diventa pasta filata. E poi la filatura, l'annodatura delle trecce e dei nodini, la testina della scamorza appassita: gesti affidati all'abilità dei nostri <strong>mastri casari</strong>.</p>
+      <p>Una rete distributiva capillare porta le mozzarelle in tutti i punti vendita <strong>entro poche ore dalla produzione</strong>.</p>
+    </div>
+  </div>
+  <div class="wrap pillars">
+    <article class="pillar reveal">
+      <span class="pillar__n">i.</span>
+      <h3>Ricetta naturale</h3>
+      <p>Solo latte, sale, caglio e fermenti lattici nelle nostre mozzarelle.</p>
+    </article>
+    <article class="pillar reveal">
+      <span class="pillar__n">ii.</span>
+      <h3>Una mozzarella <em>slow</em></h3>
+      <p>Sedici ore di lavorazione, con i soli fermenti lattici vivi.</p>
+    </article>
+    <article class="pillar reveal">
+      <span class="pillar__n">iii.</span>
+      <h3>Come una volta</h3>
+      <p>Filiamo la cagliata, annodiamo trecce e nodini, formiamo le testine delle scamorze.</p>
+    </article>
+  </div>
+  <div class="wrap mosaic" aria-hidden="true">
+    <figure class="mosaic__a parallax" data-speed="-0.06"><img src="assets/img/foto/casaro.webp" alt="" loading="lazy" width="800" height="533"></figure>
+    <figure class="mosaic__b parallax" data-speed="0.05"><img src="assets/img/foto/mani.webp" alt="" loading="lazy" width="800" height="533"></figure>
+    <figure class="mosaic__c parallax" data-speed="-0.03"><img src="assets/img/foto/donna-arco.webp" alt="" loading="lazy" width="800" height="533"></figure>
+  </div>
+</section>
+
+<!-- ============ LE 16 ORE ============ -->
+<section class="hours hours--static" id="sedici-ore" aria-labelledby="hoursTitle">
+  <div class="hours__head wrap reveal">
+    <p class="eyebrow eyebrow--light">La nostra mozzarella è slow</p>
+    <h2 class="h2" id="hoursTitle">Sedici ore, <em>senza fretta.</em></h2>
+    <p class="lead">Dal latte pastorizzato alla vaschetta, come si faceva secoli fa. Scorri e segui la giornata del caseificio.</p>
+  </div>
+  <div class="hours__stage" id="hoursStage">
+    <div class="hours__sticky">
+      <div class="hours__visual">
+        <div class="hours__photos" id="hoursPhotos"></div>
+        <div class="clock" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <circle class="clock__track" cx="60" cy="60" r="52"/>
+            <circle class="clock__fill" id="clockFill" cx="60" cy="60" r="52" pathLength="100"/>
+            <g id="clockTicks"></g>
+          </svg>
+          <div class="clock__txt"><b id="clockH">0</b><span>ore</span></div>
+        </div>
+      </div>
+      <div class="hours__text"><ol class="hours__steps" id="hoursSteps"></ol></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NUMERI ============ -->
+<section class="numbers" id="numeri" aria-label="Bella Molisana in numeri">
+  <div class="wrap numbers__grid">
+    <div class="num reveal"><b data-count="30000">30.000</b><span>mozzarelle si tuffano ogni giorno nell'acqua sorgiva del Matese</span></div>
+    <div class="num reveal"><b data-count="20000">20.000</b><span>litri di latte per 15.000 vaschette di mozzarella</span></div>
+    <div class="num reveal"><b data-count="16">16</b><span>ore dal latte pastorizzato al confezionamento</span></div>
+    <div class="num reveal"><b data-count="12">12</b><span>ore per consegnare in un raggio di 300 km</span></div>
+  </div>
+  <p class="numbers__live wrap reveal" id="live" aria-live="off">Da quando sei qui, nelle vasche del Matese si sono tuffate <b id="liveN">0</b> mozzarelle Bella Molisana.</p>
+</section>
+
+<!-- ============ RICETTA BELLA SANA ============ -->
+<section class="recipe" id="ricetta" aria-labelledby="recipeTitle">
+  <div class="wrap recipe__grid">
+    <div class="recipe__left reveal">
+      <p class="eyebrow">Una ricetta bella sana</p>
+      <h2 class="h2" id="recipeTitle">L'etichetta più <em>corta</em> che c'è.</h2>
+      <div class="label" id="label">
+        <div class="label__top"><img src="assets/img/logo.webp" alt="" width="520" height="47"><span>Mozzarella</span></div>
+        <p class="label__h">Ingredienti</p>
+        <ul class="label__list">
+          <li><span>Latte</span><small>fresco pastorizzato, filiera controllata</small></li>
+          <li><span>Sale</span><small>solo il giusto</small></li>
+          <li><span>Caglio</span><small>per la cagliata</small></li>
+          <li><span>Fermenti lattici</span><small>vivi, per la maturazione naturale</small></li>
+        </ul>
+        <p class="label__foot">Nient'altro. E l'acqua del Matese, dove le mozzarelle appena fatte vengono tuffate.</p>
+      </div>
+    </div>
+    <div class="recipe__right reveal">
+      <div class="tabs" role="tablist" aria-label="Una ricetta bella sana" id="recipeTabs"></div>
+      <div class="recipe__panel" id="recipePanel" role="tabpanel" tabindex="0"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODOTTI ============ -->
+<section class="products" id="prodotti" aria-labelledby="prodTitle">
+  <div class="wrap products__head reveal">
+    <p class="eyebrow">I nostri prodotti caseari</p>
+    <h2 class="h2" id="prodTitle">I grandi classici della tradizione <em>casearia molisana.</em></h2>
+  </div>
+
+  <div class="wrap families" id="families"></div>
+
+  <div class="wrap catalog" id="catalogo">
+    <div class="catalog__bar reveal">
+      <div class="chips" id="famChips" role="group" aria-label="Filtra per famiglia"></div>
+      <div class="catalog__right">
+        <div class="seg" id="whereSeg" role="group" aria-label="Dove si trova">
+          <button type="button" data-w="" aria-pressed="true">Tutti</button>
+          <button type="button" data-w="scaffale" aria-pressed="false">Scaffale frigo</button>
+          <button type="button" data-w="banco" aria-pressed="false">Banco gastronomia</button>
+        </div>
+        <label class="switch"><input type="checkbox" id="slToggle"><span></span>Senza lattosio</label>
+      </div>
+    </div>
+    <p class="catalog__count" id="catCount" aria-live="polite"></p>
+    <ul class="grid" id="grid"></ul>
+  </div>
+
+  <div class="wrap where">
+    <article class="where__card reveal">
+      <img src="assets/img/foto/f-vaschetta.webp" alt="Mozzarelle confezionate in vaschetta sulla linea" loading="lazy" width="800" height="533">
+      <div>
+        <p class="eyebrow">Nello scaffale frigo</p>
+        <h3>La famosa vaschetta</h3>
+        <p>Mozzarelle, treccine, bocconcini, nodini e ricotta in vaschetta; le scamorze appassite sottovuoto; il burro di panna, anche senza lattosio, in carta pergamena. Così la freschezza arriva intatta e incontaminata dal caseificio alla tua tavola.</p>
+      </div>
+    </article>
+    <article class="where__card reveal">
+      <img src="assets/img/foto/banco.webp" alt="Mozzarelle Bella Molisana incartate in carta pergamena al banco gastronomia" loading="lazy" width="1200" height="678">
+      <div>
+        <p class="eyebrow">Al banco gastronomia</p>
+        <h3>Chiedila al tuo salumiere</h3>
+        <p>La mozzarella in diverse grammature incartata in carta pergamena, la scamorza appassita anche affumicata, la ricotta delicata e la sfoglia di mozzarella, già condita o da condire con i gusti della tua fantasia.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ TERRITORIO ============ -->
+<section class="land" id="territorio" aria-labelledby="landTitle">
+  <div class="land__hero">
+    <img class="parallax" data-speed="0.12" src="assets/img/foto/matese.webp" srcset="assets/img/foto/matese-m.webp 900w, assets/img/foto/matese.webp 1920w" sizes="100vw" alt="Le montagne verdi del Matese" loading="lazy" width="1920" height="1280">
+    <div class="land__heroText wrap">
+      <p class="eyebrow eyebrow--light">Una storia molisana</p>
+      <h2 class="h2" id="landTitle">Alle falde del Matese, <em>dove l'acqua è pura.</em></h2>
+    </div>
+  </div>
+  <div class="wrap land__grid">
+    <div class="land__story">
+      <div class="story reveal" data-place="campochiaro">
+        <span class="story__k">Campochiaro · poco più di 600 abitanti</span>
+        <h3>Un paesello ai piedi della montagna</h3>
+        <p>Bella Molisana nasce a Campochiaro, alle falde del Matese: un luogo puro e incontaminato da cui attinge il suo ingrediente di purezza, l'acqua. Le mozzarelle vengono lavorate con le <strong>acque sorgive del Matese</strong>, che sgorgano a poca distanza dallo stabilimento.</p>
+      </div>
+      <div class="story reveal" data-place="tratturo">
+        <span class="story__k">II secolo a.C.</span>
+        <h3>Il tratturo e la transumanza</h3>
+        <p>Il nostro territorio è terra di pastorizia fin dai tempi dei Sanniti ed è attraversato da un'antica via della transumanza, il <strong>tratturo Pescasseroli–Candela</strong>. Ai primi freddi greggi, mandrie e pastori scendevano dai pascoli di montagna verso le pianure.</p>
+        <p>Da qui nasce la scamorza appassita: quando i viaggi erano lenti, un formaggio poco umido durava di più.</p>
+      </div>
+      <div class="story reveal" data-place="altilia">
+        <span class="story__k">Altilia · Saepinum</span>
+        <h3>A due passi dai Sanniti</h3>
+        <p>Vicino a noi c'è Altilia, l'area archeologica sannita più importante della storia antica: da sempre questi luoghi sono scenario di pastorizia, transumanza e grande tradizione casearia.</p>
+      </div>
+      <div class="story reveal" data-place="oasi">
+        <span class="story__k">Oasi WWF di Guardiaregia</span>
+        <h3>Aria buona, acqua limpida</h3>
+        <p>Campochiaro è compreso nell'Oasi WWF di Guardiaregia, la seconda oasi d'Italia per estensione. In questa bellezza affonda le radici la ricetta molisana: la maturazione della cagliata con i soli fermenti lattici vivi.</p>
+      </div>
+      <div class="story reveal" data-place="raggio">
+        <span class="story__k">Logistica express</span>
+        <h3>300 km in 12 ore</h3>
+        <p>Depositi dislocati sul territorio e una rete che funziona come un orologio: le prime mozzarelle partono il giorno stesso in cui sono state lavorate e raggiungono ogni punto vendita in un raggio di 300 km entro 12 ore.</p>
+      </div>
+    </div>
+    <div class="land__mapCol">
+      <div class="land__map" id="mapBox">
+        <svg id="landMap" role="img" aria-label="Mappa del Molise e dell'Italia centro-meridionale con Campochiaro, il Matese, Altilia, l'Oasi di Guardiaregia, il tratturo Pescasseroli–Candela e il raggio di 300 km"></svg>
+        <p class="land__mapCap" id="mapCap">Campochiaro (CB)</p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap gallery" aria-label="Il territorio in immagini">
+    <figure class="reveal"><img src="assets/img/foto/ruscello.webp" alt="Un ruscello di acqua sorgiva tra le rocce del Matese" loading="lazy" width="900" height="600"><figcaption>Le sorgenti del Matese</figcaption></figure>
+    <figure class="reveal"><img src="assets/img/foto/altilia.webp" alt="Le colonne dell'area archeologica di Altilia" loading="lazy" width="800" height="533"><figcaption>Altilia, Saepinum</figcaption></figure>
+    <figure class="reveal"><img src="assets/img/foto/lago.webp" alt="Un lago tra le colline verdi del Molise" loading="lazy" width="800" height="533"><figcaption>Il Molise verde</figcaption></figure>
+    <figure class="reveal"><img src="assets/img/foto/caseificio.webp" alt="Il caseificio Bella Molisana nella vallata di Campochiaro" loading="lazy" width="800" height="456"><figcaption>Il caseificio</figcaption></figure>
+  </div>
+</section>
+
+<!-- ============ QUALITÀ ============ -->
+<section class="quality" id="qualita" aria-labelledby="qualTitle">
+  <div class="wrap">
+    <blockquote class="quote reveal">
+      <p id="qualTitle">Il gusto di Bella Molisana è unico: perfino i bambini, assaggiando una mozzarella, capiscono se è <em>Bella Molisana</em> o no.</p>
+      <footer>È la qualità che spiega il gusto</footer>
+    </blockquote>
+  </div>
+  <div class="wrap quality__rows">
+    <article class="qrow reveal">
+      <figure><img src="assets/img/foto/f-filatura.webp" alt="La pasta filata stirata a mano nell'acqua calda" loading="lazy" width="800" height="533"></figure>
+      <div>
+        <span class="qrow__n">85°</span>
+        <h3>Lavorazione come da tradizione</h3>
+        <p>Il momento della filatura è delicato e da esso dipende tutta la qualità della mozzarella. Da noi non lo decide nessuna macchina: è il casaro che frantuma con le mani un pugno di cagliata, lo getta nell'acqua a circa 85 °C, lo fonde con un bastoncino di legno e lo stira fino a ottenere un filo continuo.</p>
+        <p>Così la pasta diventa un nastro setoso, lucido e morbido, plastico e formabile. Le mozzarelle si consolidano nell'acqua fredda corrente.</p>
+      </div>
+    </article>
+    <article class="qrow qrow--rev reveal">
+      <figure><img src="assets/img/foto/caseificio.webp" alt="Lo stabilimento di Campochiaro" loading="lazy" width="800" height="456"></figure>
+      <div>
+        <span class="qrow__n">2</span>
+        <h3>Un caseificio, due anime</h3>
+        <p>Quella <strong>industriale</strong> è nel rigore produttivo, nell'attenzione alla sicurezza alimentare e nella scelta della vaschetta, che porta il prodotto integro dalla linea alla tavola.</p>
+        <p>Quella <strong>tradizionale</strong> è nella filatura, nell'annodatura, nella testina della scamorza, tutte a cura del mastro casaro, e nei tempi più lunghi dei fermenti lattici vivi.</p>
+      </div>
+    </article>
+    <article class="qrow reveal">
+      <figure><img src="assets/img/foto/f-formatura.webp" alt="Le mani di un mastro casaro formano una mozzarella" loading="lazy" width="800" height="533"></figure>
+      <div>
+        <span class="qrow__n">∞</span>
+        <h3>I nostri mastri casari</h3>
+        <p>Sono i protagonisti della magia di Bella Molisana e si tramandano il sapere di generazione in generazione. Governano la cagliatura, colgono il momento unico della filatura, intrecciano e formano la pasta, poi tuffano i prodotti morbidi e bianchi nell'acqua sorgiva del Matese.</p>
+        <p class="qrow__end">La magia è conclusa.</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="wrap cert reveal" id="certificazioni">
+    <div class="cert__seal" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><defs><path id="certPath" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+        <text><textPath href="#certPath">Food Safety Management · Campochiaro (CB) ·</textPath></text></svg>
+      <div><b>ISO</b><span>22000</span><small>2018</small></div>
+    </div>
+    <div class="cert__text">
+      <p class="eyebrow">Certificazioni</p>
+      <h3 class="h3">Sicurezza alimentare certificata</h3>
+      <p>Lo stabilimento di Campochiaro è conforme agli standard del <strong>Food Safety Management ISO 22000:2018</strong>, lo standard proprio del settore alimentare basato sui principi HACCP del Codex Alimentarius.</p>
+      <p>Non è obbligatorio, ma è un vero punto di riferimento nell'applicazione dei regolamenti comunitari su sicurezza alimentare e igiene.</p>
+    </div>
+    <figure class="cert__img"><img src="assets/img/foto/controllo.webp" alt="Controlli di qualità nello stabilimento" loading="lazy" width="800" height="533"></figure>
+  </div>
+</section>
+
+<!-- ============ CONTATTI ============ -->
+<section class="contact" id="contatti" aria-labelledby="contactTitle">
+  <div class="wrap contact__grid">
+    <div class="contact__intro reveal">
+      <p class="eyebrow eyebrow--light">Parla con noi</p>
+      <h2 class="h2" id="contactTitle">Dove trovare <em>Bella Molisana?</em></h2>
+      <p>Scrivici il tuo CAP o la località in cui vivi e ti indicheremo il negozio più vicino. Assaggia le nostre specialità e dicci cosa ne pensi: siamo attentissimi al parere dei nostri consumatori.</p>
+      <a class="phone" href="tel:800010188"><span>Numero verde · Servizio consumatori</span><b>800 01 01 88</b></a>
+      <ul class="contact__list">
+        <li><span>Stabilimento</span>Via Don Giuseppe Mucciardi, 1 · 86020 Campochiaro (CB)</li>
+        <li><span>Email</span><a href="mailto:info@bellamolisana.it">info@bellamolisana.it</a></li>
+        <li><span>Visite</span>Se lo desideri, vieni a trovarci: saremo lieti di farti visitare lo stabilimento e spiegarti i nostri semplici metodi di produzione.</li>
+      </ul>
+    </div>
+    <div class="contact__forms reveal">
+      <div class="seg seg--light" role="tablist" aria-label="Tipo di richiesta" id="formSeg">
+        <button type="button" role="tab" aria-selected="true" aria-controls="fShop" id="tShop">Cerca negozio</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="fMsg" id="tMsg">Scrivici</button>
+      </div>
+      <form class="form" id="fShop" role="tabpanel" aria-labelledby="tShop" novalidate>
+        <label>CAP o località<input name="cap" required maxlength="60" autocomplete="postal-code" placeholder="es. 86100 Campobasso"></label>
+        <label>Cosa cerchi (facoltativo)<input name="cosa" maxlength="120" placeholder="es. Nodini, Ricotta 250 g"></label>
+        <button class="btn btn--light" type="submit">Prepara l'email</button>
+        <p class="form__note">Si apre il tuo programma di posta con il messaggio già scritto per info@bellamolisana.it. Il sito non salva nulla.</p>
+      </form>
+      <form class="form" id="fMsg" role="tabpanel" aria-labelledby="tMsg" hidden novalidate>
+        <label>Nome<input name="nome" required maxlength="80" autocomplete="name"></label>
+        <label>Messaggio<textarea name="msg" required maxlength="2000" rows="5" placeholder="Idee, suggerimenti, opinioni…"></textarea></label>
+        <button class="btn btn--light" type="submit">Prepara l'email</button>
+        <p class="form__note">Si apre il tuo programma di posta: decidi tu se inviare. Il sito non raccoglie né salva dati.</p>
+      </form>
+      <div class="gmap" id="gmap">
+        <button class="btn btn--line btn--light-line" type="button" id="gmapBtn">Mostra la mappa di Campochiaro</button>
+        <p>La mappa è di Google e si carica solo se la chiedi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <img src="assets/img/logo-bianco.webp" alt="Bella Molisana" width="520" height="47" loading="lazy">
+      <p class="foot__motto">Fresca tradizione casearia · Semplice e naturale</p>
+    </div>
+    <nav class="foot__nav" aria-label="Sezioni">
+      <a href="#storia">La storia</a><a href="#sedici-ore">Le 16 ore</a><a href="#ricetta">Ricetta bella sana</a><a href="#prodotti">Prodotti</a><a href="#territorio">Il Matese</a><a href="#certificazioni">Certificazioni</a><a href="#contatti">Contatti</a>
+    </nav>
+    <div class="foot__social">
+      <a href="https://www.facebook.com/bellamolisana.mozzarella" rel="noopener noreferrer" target="_blank">Facebook <span aria-hidden="true">↗</span></a>
+      <button type="button" class="foot__egg" id="eggBtn">Non tuffare le mozzarelle</button>
+    </div>
+  </div>
+  <p class="foot__legal wrap">Idal Srl · Via Antonio Abete, 40 · 82100 Benevento (BN) · Camera di Commercio di Benevento, REA 59923 · P. IVA 00682990627 · <a href="mailto:info@bellamolisana.it">info@bellamolisana.it</a><br>Questo sito non usa cookie né strumenti di tracciamento.</p>
+</footer>
+
+<!-- ============ SCHEDA PRODOTTO ============ -->
+<dialog class="modal" id="modal" aria-labelledby="mTitle">
+  <div class="modal__box">
+    <button class="modal__close" type="button" id="mClose" aria-label="Chiudi la scheda">×</button>
+    <div class="modal__media">
+      <img id="mImg" alt="" width="640" height="480">
+      <div class="modal__thumbs" id="mThumbs"></div>
+    </div>
+    <div class="modal__body">
+      <p class="eyebrow" id="mKicker"></p>
+      <h3 class="modal__title" id="mTitle"></h3>
+      <p class="modal__fmt" id="mFmt"></p>
+      <div class="modal__tags" id="mTags"></div>
+      <div class="modal__desc" id="mDesc"></div>
+      <h4>Ingredienti</h4>
+      <p class="modal__ingr" id="mIngr"></p>
+      <h4>Valori nutrizionali medi <small>per 100 g</small></h4>
+      <table class="nutri" id="mNutri"><thead><tr><th scope="col">Per 100 g</th><th scope="col">Valore</th><th scope="col">% AR*</th></tr></thead><tbody></tbody></table>
+      <p class="nutri__note">*Assunzioni di riferimento di un adulto medio (8400 kJ / 2000 kcal).</p>
+      <div class="modal__nav">
+        <button type="button" id="mPrev" aria-label="Prodotto precedente">←</button>
+        <span id="mPos"></span>
+        <button type="button" id="mNext" aria-label="Prodotto successivo">→</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/prodotti.js?v=1" defer></script>
+<script src="assets/js/mappa.js?v=1" defer></script>
+<script src="assets/js/main.js?v=1" defer></script>
+</body>
+</html>
